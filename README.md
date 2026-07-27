@@ -2,22 +2,15 @@
 
 
 ## Aim
-
-Write your aim here.
-
-Example:
-
-> To identify a real-world sequential decision-making problem and represent it formally as a Markov Decision Process by defining its states, actions, rewards, transitions, and Python representation.
+To identify a real-world sequential decision-making problem and represent it formally as a Markov Decision Process by defining its states, actions, rewards, transitions, and Python representation.
 
 ---
 
 ## Problem Statement
-
+Smart thermostats must decide when to heat, cool, or stay idle in order to keep a room at a comfortable temperature while minimizing energy usage. Since the room's next temperature depends only on its current temperature and the action taken (not on the full history), this problem can be modeled as a Markov Decision Process. The goal is to define the states, actions, transition probabilities, and rewards for this system so that an optimal climate-control policy can eventually be learned.
 ### Problem Description
 
-Write your answer here.
-
-Describe the real-world application that you selected.
+A smart thermostat must decide, at each time step, whether to heat, cool, or stay idle in order to keep a room's temperature within a comfortable range while minimizing energy use. Since the next temperature depends only on the current temperature and the action taken (not on past history), this decision-making problem can be formally modeled as a Markov Decision Process.
 
 
 ---
@@ -44,18 +37,17 @@ Where:
 
 ## State Space
 
-Write your answer here.
-
 The state space should list all possible situations in which the agent can exist.
 
 Example format:
 
 ```text
 S = {
-    State 1,
-    State 2,
-    State 3,
-    ...
+    Too_Cold,       # < 16°C
+    Cold,           # 16–19°C
+    Comfortable,    # 20–24°C
+    Warm,           # 25–28°C
+    Too_Hot         # > 28°C
 }
 ```
 
@@ -65,17 +57,16 @@ S = {
 
 ## Sample State
 
-Write your answer here.
 
 A sample state is one specific example from the state space.
 
-
+s = "Cold"
 
 ---
 
 ## Action Space
 
-Write your answer here.
+
 
 The action space should list all possible actions available to the agent.
 
@@ -83,10 +74,9 @@ Example format:
 
 ```text
 A = {
-    Action 1,
-    Action 2,
-    Action 3,
-    ...
+    Heat,     # turn on the heater
+    Cool,     # turn on the air conditioner
+    Idle      # take no action
 }
 ```
 
@@ -95,11 +85,10 @@ A = {
 
 ## Sample Action
 
-Write your answer here.
 
 A sample action is one action selected from the action space.
 
-
+a = "Heat"
 
 ---
 
