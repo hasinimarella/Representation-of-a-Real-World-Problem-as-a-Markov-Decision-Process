@@ -39,7 +39,7 @@ Where:
 
 ## State Space
 
-Write your answer here.
+
 
 The state space should list all possible situations in which the agent can exist.
 
@@ -136,8 +136,6 @@ So overall reward = comfort_reward(s') + energy_cost(a)
 
 ## Graphical Representation
 
-
-Draw the MDP graph.
 
 The graph should include:
 
